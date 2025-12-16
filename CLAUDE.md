@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Markdown for content, Python 3.8+ for code examples, LaTeX for mathematical expressions + Docusaurus for documentation site, Pandoc for PDF export, ROS 2 (Humble Hawksbill), Gazebo Garden, NVIDIA Isaac Sim, Unity 2022.3 LTS (001-physical-ai-textbook)
+- Git repository with documentation files in Markdown format, code examples in Python (001-physical-ai-textbook)
+
+## Recent Changes
+- 001-physical-ai-textbook: Added Markdown for content, Python 3.8+ for code examples, LaTeX for mathematical expressions + Docusaurus for documentation site, Pandoc for PDF export, ROS 2 (Humble Hawksbill), Gazebo Garden, NVIDIA Isaac Sim, Unity 2022.3 LTS

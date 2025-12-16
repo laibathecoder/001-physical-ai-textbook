@@ -1,0 +1,65 @@
+# ROS 2 Architecture Diagram - ROS Graph Visualization
+
+This text file describes the visual representation of a typical ROS 2 graph for a humanoid robot system:
+
+```
+                    ROS 2 Graph for Humanoid Robot
+                    =============================
+
+    [Sensor Nodes]          [Controller Nodes]        [Planning Nodes]
+    --------------          ------------------        --------------
+    • IMU Driver            • Joint Controllers       • Path Planner
+    • Camera Driver         • Whole-Body Ctrl       • Trajectory Gen
+    • LIDAR Driver          • Balance Ctrl          • Motion Planner
+    • Force/Torque          • Gait Generator        • Grasp Planner
+
+            \                      |                         /
+             \                     |                        /
+              \                    |                       /
+               \                   |                      /
+                \                  |                     /
+                 v                 v                    v
+
+    [Robot State] <-----> [Parameter Server] <-----> [Diagnosis]
+    -----------           ------------------        ---------
+    • robot_state         • kp, ki, kd vals       • Health Mon
+    • tf tree             • config files          • Error Log
+                          • runtime params        • Diag Aggr
+
+                          |
+                          |
+                          v
+
+                    [Visualization]
+                    -------------
+                    • RViz2
+                    • Custom GUI
+                    • Web Interface
+
+                          ^
+                          |
+                    [Coordination Layer]
+                    ------------------
+                    • Behavior Trees
+                    • Finite State Machines
+                    • Task Orchestrator
+
+                          ^
+                          |
+                    [External Systems]
+                    ----------------
+                    • Simulation (Gazebo)
+                    • Perception (Isaac)
+                    • Cloud Services
+                    • Human Operator
+
+Key ROS 2 Concepts Shown:
+- Nodes: Individual computational processes
+- Topics: Named buses over which nodes exchange messages
+- Services: Synchronous request/response communication
+- Actions: Goal-oriented communication with feedback
+- Parameters: Configuration values accessible to all nodes
+- TF: Coordinate transformation system
+```
+
+The ROS graph shows the network of nodes connected by topics, services, and parameters that form the communication backbone of the humanoid robot system. Each node performs a specific function and communicates with others through standardized interfaces.

@@ -1,55 +1,41 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: undefined → 1.0.0
+List of modified principles: None (new constitution)
+Added sections: All sections (new constitution for Physical AI & Humanoid Robotics project)
+Removed sections: None
+Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics — Technical Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Source Accuracy
+All technical definitions, scientific claims, and historical facts must be verified from primary or peer-reviewed sources. No speculative or unverified information.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Clarity & Pedagogical Structure
+Writing must be suitable for an academic audience with a computer science background. Explanations must be layered: Concept → Example → Technical Detail → Citation.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Reproducibility
+All processes, algorithms, architectures, and robotics mechanisms must be described with reproducible steps or diagrams. Code snippets must be functional and tested.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Rigor
+Prefer peer-reviewed articles, IEEE papers, ACM publications, reputable books, and official documentation.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Quality & Citation Standards
+Citation Style: APA 7th Edition. Minimum Sources: At least 15 credible sources, minimum 50% peer-reviewed. Plagiarism Tolerance: 0% before submission. Writing Quality: Maintain Flesch-Kincaid Grade Level 10–12 (clear academic English). Fact Verification: Each factual claim must include an inline citation; All data must be cross-referenced before final export.
 
-### [PRINCIPLE_6_NAME]
+### Format & Output Constraints
+Word Count: 5,000–7,000 words. Book Structure: Introduction, Core Chapters (3–5), Technical Diagrams/Code, Summary & Future Work, Reference Section. Output Formats: Docusaurus website, PDF with embedded APA citations via Spec-Kit Plus.
 
+## Success Criteria
+All claims are fully traceable with APA citations. Zero plagiarism on final PDF export. Content passes scientific fact-checking. High clarity for CS/Robotics students. Book builds successfully in Docusaurus and deploys to GitHub Pages. AI tools (Gemini + Claude Code) follow this constitution consistently.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+Use Spec-Kit Plus for project management. Follow Docusaurus-based development workflow. Export to PDF via Spec-Kit Plus. Apply peer review process for all technical content.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution governs all development activities for the Physical AI & Humanoid Robotics textbook project. All contributors must adhere to these principles. Any deviation requires explicit approval and documentation. Compliance will be verified during code reviews and content validation processes.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-14 | **Last Amended**: 2025-12-14

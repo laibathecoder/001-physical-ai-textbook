@@ -1,0 +1,7 @@
+Placeholder for physics-ai-concepts.png diagram
+This file represents where the physics-ai-concepts.png diagram would be located.
+The actual diagram should illustrate key concepts in Physical AI including:
+- The relationship between digital AI and embodied AI
+- Key physics principles relevant to robotics
+- Sensor integration and environmental grounding
+- Examples of physics understanding in robotic applications

@@ -1,0 +1,242 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Primary color changed to magenta to match the hero section */
+  --ifm-color-primary: #ff00ff;
+  --ifm-color-primary-dark: #e600e6;
+  --ifm-color-primary-darker: #cc00cc;
+  --ifm-color-primary-darkest: #b300b3;
+  --ifm-color-primary-light: #ff33ff;
+  --ifm-color-primary-lighter: #ff66ff;
+  --ifm-color-primary-lightest: #ff99ff;
+
+  /* Background colors with premium dark tone */
+  --ifm-background-color: #1a1a2e; /* Midnight purple/dark graphite */
+  --ifm-background-surface-color: #161624; /* Slightly darker for contrast */
+
+  /* Text colors */
+  --ifm-color-emphasis-0: #ffffff; /* White for primary text */
+  --ifm-color-emphasis-100: #f5f5f6; /* Near white */
+  --ifm-color-emphasis-200: #e4e4e7; /* Light gray */
+  --ifm-color-emphasis-300: #d4d4d8; /* Lighter gray */
+  --ifm-color-emphasis-400: #a1a1aa; /* Medium gray */
+  --ifm-color-emphasis-500: #71717a; /* Medium dark gray */
+  --ifm-color-emphasis-600: #52525b; /* Dark gray */
+  --ifm-color-emphasis-700: #3f3f46; /* Darker gray */
+  --ifm-color-emphasis-800: #2d2d33; /* Very dark gray */
+  --ifm-color-emphasis-900: #18181b; /* Near black */
+
+  --ifm-font-color-base: #ffffff; /* White text for better contrast */
+  --ifm-global-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 0, 255, 0.15);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff00ff;
+  --ifm-color-primary-dark: #e600e6;
+  --ifm-color-primary-darker: #cc00cc;
+  --ifm-color-primary-darkest: #b300b3;
+  --ifm-color-primary-light: #ff33ff;
+  --ifm-color-primary-lighter: #ff66ff;
+  --ifm-color-primary-lightest: #ff99ff;
+
+  /* Background with subtle gradient effect */
+  --ifm-background-color: #1a1a2e; /* Deep midnight purple */
+  --ifm-background-surface-color: #161624;
+
+  --ifm-navbar-background-color: #161624; /* Glossy dark tone */
+  --ifm-footer-background-color: #161624; /* Match navbar */
+
+  --ifm-font-color-base: #ffffff; /* White text */
+  --ifm-font-color-base-inverse: #ffffff;
+  --ifm-heading-color: #ffffff;
+
+  --ifm-toc-border-color: #303846;
+  --ifm-global-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 0, 255, 0.2);
+}
+
+/* Global body background */
+body {
+  background: linear-gradient(135deg, #0f0c29, #1a1a2e, #16213e);
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* Define hero-like text style for navbar */
+.navbar__hero-text {
+  background: linear-gradient(45deg, #ff00ff, #cc00cc, #ff00ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(90deg, #161624, #1a1a2e, #161624);
+  border-bottom: 1px solid rgba(255, 0, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  min-height: 64px; /* Slightly taller for premium feel */
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
+}
+
+.navbar__logo {
+  height: 48px !important;
+  width: 48px !important;
+  margin-right: 1.25rem;
+  filter: drop-shadow(0 0 12px rgba(255, 0, 255, 0.7));
+}
+
+.navbar__logo img,
+.navbar__logo svg {
+  filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.5));
+}
+
+.navbar__title {
+  background: linear-gradient(45deg, #ff00ff, #cc00cc, #ff00ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  font-weight: 600;
+}
+
+.navbar__item,
+.navbar__link {
+  background: linear-gradient(45deg, #ff00ff, #cc00cc, #ff00ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar__link:hover {
+  background: none;
+  -webkit-background-clip: none;
+  background-clip: none;
+  -webkit-text-fill-color: #ffffff !important; /* Pure white on hover */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.navbar__link--active {
+  background: linear-gradient(45deg, #ff00ff, #cc00cc, #ff00ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  position: relative;
+}
+
+.navbar__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff00ff, transparent);
+  opacity: 0.8;
+}
+
+/* Mobile responsiveness for navbar */
+@media (max-width: 996px) {
+  .navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-height: 56px;
+  }
+
+  .navbar__logo {
+    height: 36px !important;
+    width: 36px !important;
+    margin-right: 0.875rem;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.5));
+  }
+
+  .navbar__item,
+  .navbar__link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer styling */
+.footer {
+  background: linear-gradient(90deg, #161624, #1a1a2e, #161624);
+  border-top: 1px solid rgba(255, 0, 255, 0.1);
+  color: #ffffff;
+}
+
+.footer__title,
+.footer__link,
+.footer__item {
+  color: #ffffff !important;
+}
+
+.footer__link:hover {
+  color: #ff66ff !important;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #161624;
+}
+
+/* Global link styling */
+a {
+  color: #ff66ff;
+}
+
+a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+/* Main content area */
+.main-wrapper {
+  background: transparent;
+}
+
+/* Container for content */
+.container {
+  background: transparent;
+}

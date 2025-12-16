@@ -1,0 +1,74 @@
+# Pandoc configuration for Physical AI & Humanoid Robotics textbook PDF export
+
+# Input format
+from: markdown
+
+# Output format
+to: pdf
+
+# Document metadata
+metadata:
+  title: "Physical AI & Humanoid Robotics Textbook"
+  author:
+    - "Physical AI & Humanoid Robotics Project Team"
+  date: "2025"
+  description: "A comprehensive guide to embodied intelligence and humanoid control systems"
+
+# PDF output options
+pdf-engine: xelatex  # Use XeLaTeX for better font support
+variable:
+  documentclass: report
+  classoption:
+    - oneside
+  fontsize: 12pt
+  geometry:
+    - margin=1in
+  linkcolor: blue
+  urlcolor: blue
+  citecolor: black
+  subparagraph: true
+
+# Include bibliography
+biblatex: true
+bibliography: ./docs/references/citations.md
+
+# Table of contents
+toc: true
+toc-depth: 3
+
+# Numbering
+number-sections: true
+
+# Highlighting
+highlight-style: tango
+
+# Filters
+filter:
+  - pandoc-citeproc
+
+# Additional options
+standalone: true
+include-in-header:
+  - text: |
+      \usepackage{fontspec}
+      \usepackage{unicode-math}
+      \usepackage{booktabs}
+      \usepackage{longtable}
+      \usepackage{array}
+      \usepackage{multirow}
+      \usepackage{wrapfig}
+      \usepackage{float}
+      \usepackage{colortbl}
+      \usepackage{pdflscape}
+      \usepackage{tabu}
+      \usepackage{threeparttable}
+      \usepackage{makecell}
+      \usepackage{xcolor}
+      \usepackage{listings}
+      \definecolor{codebg}{rgb}{0.95,0.95,0.95}
+      \lstset{
+        backgroundcolor=\color{codebg},
+        basicstyle=\ttfamily\small,
+        breaklines=true,
+        postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+      }
