@@ -1,0 +1,20 @@
+{
+  "name": "hackathon4-humanoid-robotics-textbook",
+  "version": "1.0.0",
+  "description": "Physical AI & Humanoid Robotics Textbook",
+  "private": true,
+  "scripts": {
+    "build": "cd website && npm run build",
+    "start": "cd website && npm run start",
+    "dev": "cd website && npm run start",
+    "docusaurus": "cd website && npm run docusaurus"
+  },
+  "keywords": [
+    "docusaurus",
+    "documentation",
+    "robotics",
+    "ai"
+  ],
+  "author": "Physical AI & Humanoid Robotics Textbook",
+  "license": "MIT"
+}
